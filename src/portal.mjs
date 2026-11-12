@@ -1,5 +1,5 @@
 
-import { logoSvg } from './logo.mjs';
+import { logoImg } from './logo.mjs';
 
 const PHONE = '06 52 27 24 40';
 const TEL = 'tel:+33652272440';
@@ -43,7 +43,7 @@ export const portal = () => `<!doctype html>
 <a class="skip" href="#choix">Aller au choix de l'activité</a>
 <h1 class="sr">Baye Clean : nettoyage et dératisation</h1>
 <header class="top">
-  <a class="brand" href="index.html" aria-label="Baye Clean, nettoyage et dératisation">${logoSvg({ decorative: true })}</a>
+  <a class="brand" href="index.html" aria-label="Baye Clean, nettoyage et dératisation">${logoImg({ alt: '' }).replace('decoding="async"', 'fetchpriority="high"')}</a>
   <div class="top__contact">
     <a class="btn btn--call" href="${TEL}" aria-label="Appeler le ${PHONE}">${ICON.phone}<span>${PHONE}</span></a>
     <a class="btn btn--wa" href="${WA}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICON.wa}<span>WhatsApp</span></a>

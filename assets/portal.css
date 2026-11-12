@@ -29,11 +29,7 @@ h1,h2,p{margin:0}
 .btn--wa{background:oklch(.55 .15 150);color:var(--white)}
 .top__contact{padding-top:6px}
 
-.doors{display:grid;grid-template-columns:1fr 1fr;min-height:100svh;transition:grid-template-columns .7s var(--ease)}
-@media (hover:hover) and (min-width:761px){
-  .doors:has(.door--derat:hover){grid-template-columns:1.22fr .78fr}
-  .doors:has(.door--menage:hover){grid-template-columns:.78fr 1.22fr}
-}
+.doors{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
 .door{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:100svh;overflow:hidden;padding:clamp(6rem,10vw,8rem) var(--gutter) clamp(2.6rem,6vw,4.6rem)}
 .door__body{max-width:34rem;min-width:0}
 .door__tag{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}
@@ -48,15 +44,13 @@ h1,h2,p{margin:0}
 /* Dératisation : photo, voile sombre neutre */
 .door--derat{background:oklch(.16 .01 250);color:var(--white)}
 .door--derat::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,oklch(.14 .01 250/.55) 0%,oklch(.14 .01 250/.72) 45%,oklch(.12 .01 250/.94) 100%)}
-.door--derat:hover .door__photo{transform:scale(1.04)}
 .door--derat .door__go{background:var(--white);color:oklch(.18 .02 250)}
 .door--derat .door__tag{color:oklch(.86 .05 150)}
 
 /* Nettoyage : couleurs du logo, étincelles */
 .door--menage{background:var(--navy);color:var(--white)}
 .door--menage::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,oklch(.24 .075 262/.55) 0%,oklch(.24 .075 262/.75) 45%,oklch(.2 .07 262/.95) 100%)}
-.door__photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
-.door--menage:hover .door__photo{transform:scale(1.04)}
+.door__photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
 .door--menage::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-70px;height:120px;border-top:5px solid var(--blue);border-radius:50% 50% 0 0;pointer-events:none}
 .door--menage .door__tag{color:var(--sky)}
 .door--menage h2{font-family:"Archivo","Arial Black",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(2.6rem,6vw,6rem)}
@@ -95,9 +89,31 @@ h1,h2,p{margin:0}
 
 /* Logo horizontal SVG en version blanche, sans carte */
 .brand{padding:0;background:none;box-shadow:none;border-radius:0;width:clamp(230px,26vw,360px);top:22px;filter:drop-shadow(0 2px 12px oklch(.1 .02 260/.55))}
-.brand svg{display:block;width:100%;height:auto;--logo-ink:#fff;--logo-accent:#8cc3ff}
+.brand img{display:block;width:100%;height:auto}
 @media (max-width:760px){
   .brand{width:min(230px,58vw);top:16px}
   .door--menage h2{font-size:clamp(2.1rem,10.4vw,3.4rem)}
   .door h2{font-size:clamp(2.4rem,12vw,3.8rem)}
+}
+
+/* Logo officiel en haut de l'entrée ; les deux côtés ne bougent pas */
+.brand{width:clamp(250px,30vw,430px);filter:drop-shadow(0 2px 14px oklch(.1 .02 260/.6))}
+.door__photo{transform:none}
+@media (min-width:761px) and (max-width:1000px){.brand{left:var(--gutter);transform:none}}
+@media (max-width:760px){.brand{width:min(250px,62vw)}}
+
+/* Bandeau blanc en haut de l'entrée : logo officiel en couleurs d'origine */
+.top{position:relative;z-index:5;justify-content:space-between;align-items:center;height:84px;padding:0 var(--gutter);background:#fff;border-bottom:1px solid oklch(.9 .02 255);pointer-events:auto}
+.brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(230px,24vw,330px);filter:none}
+.top__contact{margin-left:auto;padding-top:0}
+.btn--call{background:#13254f;color:#fff}
+.doors{min-height:calc(100svh - 84px)}
+.door{min-height:calc(100svh - 84px);padding-top:clamp(3rem,6vw,5rem)}
+@media (min-width:761px) and (max-width:1000px){.brand{left:var(--gutter);transform:translateY(-50%)}}
+@media (max-width:760px){
+  .top{height:68px}
+  .brand{left:var(--gutter);transform:translateY(-50%);width:min(210px,56vw)}
+  .doors{min-height:auto}
+  .door{min-height:calc(50svh - 34px);padding-top:2.4rem}
+  .door--menage{padding-top:2.4rem}
 }

@@ -10,20 +10,14 @@ Les styles (nettoyage/assets/nettoyage.css) et le JS (nettoyage/assets/site.js) 
 import json
 import pathlib
 import re
-import subprocess
 
 SRC = pathlib.Path('/Users/m/Desktop/R- BOUBA MENAGE')
 HERE = pathlib.Path(__file__).resolve().parent
 
 
-def _logo(opts):
-    # Même logo SVG que l'accueil et la dératisation (src/logo.mjs).
-    js = f"import {{ logoSvg }} from './logo.mjs'; process.stdout.write(logoSvg({opts}));"
-    return subprocess.check_output(['node', '--input-type=module', '-e', js], cwd=HERE).decode()
-
-
-LOGO_COMPACT = _logo('{ tagline: false, decorative: true }')
-LOGO_FULL = _logo('{ decorative: true }')
+# Logo officiel (version blanche, fonds bleu marine) : fichiers à la racine du site, dans assets/.
+def logo(r):
+    return f'<img class="bc-logo" src="{r}../assets/logo-blanc.webp" width="1400" height="259" alt="" decoding="async">'
 DST = pathlib.Path(__file__).resolve().parent.parent / 'nettoyage'
 
 PHONE_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>'
@@ -59,7 +53,7 @@ def header(r, space):
     quote = f'{r}{space}/devis.html' if space else f'{r}index.html#espaces'
     return f'''<div class="universe"><div class="wrap universe-in"><nav aria-label="Univers Baye Clean"><a href="{r}../index.html">Baye Clean</a><a href="{r}../deratisation/index.html">Dératisation</a><a href="{r}index.html" aria-current="true">Nettoyage</a></nav><span>Île-de-France et Oise</span></div></div>
 <header class="site-header"><div class="wrap header-in">
-<a class="logo" href="{r}index.html" aria-label="Baye Clean Nettoyage, accueil">{LOGO_COMPACT}<small>Nettoyage</small></a>
+<a class="logo" href="{r}index.html" aria-label="Baye Clean Nettoyage, accueil">{logo(r)}<small>Nettoyage</small></a>
 <nav class="main-nav" aria-label="Navigation principale"><ul>
 <li class="has-sub"><a href="{r}particuliers/index.html"{cur('particuliers')}>Particuliers</a><button class="sub-btn" type="button" aria-label="Services pour particuliers" aria-expanded="false">{CHEV}</button>{sub(r, 'particuliers', PART, part_extra)}</li>
 <li class="has-sub"><a href="{r}entreprises/index.html"{cur('entreprises')}>Entreprises</a><button class="sub-btn" type="button" aria-label="Services pour entreprises" aria-expanded="false">{CHEV}</button>{sub(r, 'entreprises', ENT, ent_extra)}</li>
@@ -79,7 +73,7 @@ def footer(r, space):
     quote = f'{r}{space}/devis.html' if space else f'{r}index.html#espaces'
     return f'''<footer class="site-footer"><div class="wrap">
 <div class="footer-grid">
-<div><a class="logo logo--full" href="{r}index.html" aria-label="Baye Clean, accueil">{LOGO_FULL}</a><p>Nettoyage pour les particuliers, les entreprises et les industriels, en Île-de-France et dans l’Oise.</p></div>
+<div><a class="logo logo--full" href="{r}index.html" aria-label="Baye Clean, accueil">{logo(r)}</a><p>Nettoyage pour les particuliers, les entreprises et les industriels, en Île-de-France et dans l’Oise.</p></div>
 <div><h2>Particuliers</h2><ul>{pl}</ul></div>
 <div><h2>Entreprises</h2><ul>{el}</ul></div>
 <div><h2>Contact</h2><ul><li><a href="tel:+33652272440">06 52 27 24 40</a></li><li><a href="{WA_URL}" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="{r}particuliers/devis.html">Devis particuliers</a></li><li><a href="{r}entreprises/devis.html">Devis entreprises</a></li><li><a href="{r}../deratisation/index.html">Dératisation Baye Clean</a></li></ul></div>

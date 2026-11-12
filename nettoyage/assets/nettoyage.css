@@ -276,11 +276,16 @@ body.nettoyage .p-page-head + .p-section.p-flush { padding-top: var(--section); 
 .text-link { text-decoration-color: var(--blue); }
 
 /* Logo Baye Clean (SVG horizontal), version blanche sur fond bleu marine */
-.logo svg.bc-logo { width: auto; height: 40px; flex: none; --logo-ink: #fff; --logo-accent: #8cc3ff; }
-.logo--full svg.bc-logo { width: min(300px, 100%); height: auto; }
+.logo .bc-logo { width: auto; height: 40px; flex: none; --logo-ink: #fff; --logo-accent: #8cc3ff; }
+.logo--full .bc-logo { width: min(300px, 100%); height: auto; }
 .footer-grid .logo--full { margin-bottom: 1.2rem; }
-@media (max-width: 720px) { .logo svg.bc-logo { height: 32px; } }
+@media (max-width: 720px) { .logo .bc-logo { height: 32px; } }
 @media (max-width: 380px) { .logo small { display: none; } }
 .site-header .logo { flex: none; }
-.logo svg.bc-logo { max-width: none; }
-.logo--full svg.bc-logo { max-width: 100%; }
+.logo .bc-logo { max-width: none; }
+.logo--full .bc-logo { max-width: 100%; }
+
+/* Logo officiel (image, version blanche) */
+.logo .bc-logo { height: 40px; width: auto; max-width: none; }
+.logo--full .bc-logo { width: min(320px, 100%); height: auto; max-width: 100%; }
+@media (max-width: 720px) { .logo .bc-logo { height: 32px; } }

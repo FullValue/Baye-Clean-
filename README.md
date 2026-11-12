@@ -6,9 +6,9 @@ Site statique : déposer le dossier `baye-clean/` tel quel chez l'hébergeur (sa
 - `deratisation/` : généré par `src/build.mjs` (contenu dans `src/content/`, style dans `src/assets/style.css`)
 - `nettoyage/` : généré par `src/build-nettoyage.py` à partir des pages d'origine du dossier `R- BOUBA MENAGE`
   (styles : `nettoyage/assets/style.css` + `nettoyage/assets/nettoyage.css`, menus : `nettoyage/assets/site.js`)
-- Logo : `src/logo.mjs` dessine le logo horizontal en SVG (utilisé partout sur le site).
-  Fichiers prêts à l'emploi dans `assets/` : `logo-horizontal.svg`, `logo-horizontal-blanc.svg` (fonds sombres),
-  `logo-compact.svg`, `logo-compact-blanc.svg` (sans slogan). Le logo carré d'origine est `assets/logo.webp`.
+- Logo officiel (horizontal), utilisé partout via `src/logo.mjs` :
+  `assets/logo.webp` (couleurs d'origine, fonds clairs), `assets/logo-blanc.webp` (bleu marine passé en blanc,
+  fonds sombres), `assets/logo-horizontal-source.webp` (fichier d'origine non recadré).
 
 Régénérer après une modification, depuis le dossier `baye-clean` :
 

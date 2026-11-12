@@ -386,13 +386,13 @@ a.plate:hover{background:var(--mint-1);color:inherit}
 .need a:not(.btn){color:var(--green-hover)!important}
 
 /* ── Logo Baye Clean (SVG horizontal) ───────────── */
-.logo svg.bc-logo{width:auto;height:42px;flex:none;--logo-ink:#13254f;--logo-accent:#2a72e0}
-.logo--full svg.bc-logo{width:min(300px,100%);height:auto}
+.logo .bc-logo{width:auto;height:42px;flex:none;--logo-ink:#13254f;--logo-accent:#2a72e0}
+.logo--full .bc-logo{width:min(300px,100%);height:auto}
 .logo small{border-color:var(--line);color:var(--ink-soft)}
-@media (max-width:560px){.logo svg.bc-logo{height:34px}}
+@media (max-width:560px){.logo .bc-logo{height:34px}}
 .header .logo{flex:none}
-.logo svg.bc-logo{max-width:none}
-.logo--full svg.bc-logo{max-width:100%}
+.logo .bc-logo{max-width:none}
+.logo--full .bc-logo{max-width:100%}
 /* En-tête chargé sur écrans moyens : l'univers est déjà indiqué dans le bandeau du haut */
 @media (max-width:1440px){.header .logo small{display:none}}
 @media (min-width:1121px) and (max-width:1280px){
@@ -411,3 +411,8 @@ a.plate:hover{background:var(--mint-1);color:inherit}
 .btn--wa,.wa-float,.dock__wa{background:oklch(.53 .14 152)}
 .btn--wa:hover,.wa-float:hover{background:oklch(.46 .13 153)}
 .strip__switch span{background:var(--bright);color:var(--forest)}
+
+/* Logo officiel (image) */
+.logo .bc-logo{height:40px;width:auto;max-width:none}
+.logo--full .bc-logo{width:min(320px,100%);height:auto;max-width:100%}
+@media (max-width:560px){.logo .bc-logo{height:32px}}

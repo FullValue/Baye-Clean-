@@ -1,6 +1,6 @@
 import { SITE, tel, wa } from './config.mjs';
 import { specimens } from './specimens.mjs';
-import { logoSvg } from './logo.mjs';
+import { logoImg } from './logo.mjs';
 import { readFileSync } from 'node:fs';
 
 const map = JSON.parse(readFileSync(new URL('./content/idf-map.json', import.meta.url)));
@@ -137,9 +137,6 @@ export function render({ path, title, description, body, crumbs = null, schema =
 <meta name="theme-color" content="#13254f">
 <link rel="icon" type="image/svg+xml" href="{{r}}assets/favicon.svg">
 <link rel="preload" href="{{r}}assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{r}}assets/style.css">
 ${ld}
 </head>
@@ -150,7 +147,7 @@ ${ld}
   <span class="strip__info"><span class="status" data-status data-open="1"><i></i><span>${SITE.hoursLabel}</span></span><span class="hide-sm">Urgence nuisibles : <a href="${tel}">${SITE.phone}</a></span></span>
 </div></div>
 <header class="header"><div class="wrap">
-  <a class="logo" href="{{r}}index.html" aria-label="${SITE.name} ${SITE.universe}, accueil">${logoSvg({ tagline: false, decorative: true })}<small>${SITE.universe}</small></a>
+  <a class="logo" href="{{r}}index.html" aria-label="${SITE.name} ${SITE.universe}, accueil">${logoImg({ base: '{{r}}../' })}<small>${SITE.universe}</small></a>
   <nav class="nav" aria-label="Navigation principale">${NAV}</nav>
   <a class="btn btn--bright header__quote" href="{{r}}devis.html">Devis gratuit</a>
   <a class="btn btn--call header__phone" href="${tel}">${ICONS.phone}${SITE.phone}</a>
@@ -163,7 +160,7 @@ ${body}
 <footer class="footer"><div class="wrap">
   <div class="footer__grid">
     <div class="footer__brand">
-      <a class="logo logo--full" href="{{r}}index.html" aria-label="${SITE.name}, accueil">${logoSvg({ decorative: true })}</a>
+      <a class="logo logo--full" href="{{r}}index.html" aria-label="${SITE.name}, accueil">${logoImg({ base: '{{r}}../' })}</a>
       <a class="footer__tel" href="${tel}">${SITE.phone}</a>
       <p>${SITE.hoursLabel}.<br>Dératisation, désinsectisation et désinfection à Paris et dans toute l'Île-de-France.</p>
     </div>
