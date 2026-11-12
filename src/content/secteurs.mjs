@@ -1,0 +1,100 @@
+// Chaque page décrit le contexte réel du département, sans inventer d'interventions ni de délais chiffrés.
+export const SECTEURS = [
+  {
+    slug: 'paris', code: 75, name: 'Paris', a: 'à Paris',
+    intro: 'Immeubles anciens, caves qui communiquent, gaines partagées, restaurants à chaque coin de rue : à Paris, un problème de nuisibles dépasse rarement un seul logement. Nous intervenons dans les 20 arrondissements, avec la discrétion qu\'exige un immeuble habité.',
+    context: [
+      ['Rats et souris dans l\'ancien', 'Caves, cours intérieures, locaux poubelles, vieux conduits : les rongeurs passent d\'un bâtiment à l\'autre. Les immeubles proches de la Seine, des canaux et des parcs méritent une attention particulière sur les accès.'],
+      ['Punaises de lit', 'Tourisme, locations meublées, transports, meubles récupérés : les occasions de ramener des punaises sont nombreuses. Un studio se traite vite si l\'on agit au premier signe.'],
+      ['Blattes en immeuble', 'Elles circulent par les colonnes d\'eau et les gaines. Nous pouvons travailler avec votre syndic ou votre gardien pour traiter les logements voisins.'],
+    ],
+    cities: ['1er', '2e', '3e', '4e', '5e', '6e', '7e', '8e', '9e', '10e', '11e', '12e', '13e', '14e', '15e', '16e', '17e', '18e', '19e', '20e'],
+    citiesLabel: 'Arrondissements couverts',
+    tip: 'Avant le rendez-vous, prévenez le gardien ou le syndic si le technicien doit accéder aux caves ou au local poubelles. Cela évite un second déplacement.',
+    focus: ['deratisation.html', 'punaises-de-lit.html', 'cafards-blattes.html'],
+  },
+  {
+    slug: 'hauts-de-seine', code: 92, name: 'Hauts-de-Seine', a: 'dans les Hauts-de-Seine',
+    intro: 'Des tours de bureaux de La Défense aux pavillons du sud du département, en passant par les boucles de la Seine : les Hauts-de-Seine demandent autant de discrétion pour les entreprises que de suivi pour les copropriétés.',
+    context: [
+      ['Bureaux et commerces', 'Traitements en dehors des heures d\'ouverture, rapports écrits pour vos services généraux, contrats annuels pour les restaurants d\'entreprise et les commerces de bouche.'],
+      ['Rongeurs près de la Seine', 'De Boulogne-Billancourt à Gennevilliers, les communes riveraines sont exposées aux remontées par les réseaux. Le rebouchage des accès est ici décisif.'],
+      ['Pavillons et jardins', 'Dans le sud du département, guêpes et frelons s\'installent dans les avant-toits, les coffres de volets et les grands arbres.'],
+    ],
+    cities: ['Boulogne-Billancourt', 'Nanterre', 'Courbevoie', 'Colombes', 'Asnières-sur-Seine', 'Rueil-Malmaison', 'Levallois-Perret', 'Neuilly-sur-Seine', 'Issy-les-Moulineaux', 'Antony', 'Clamart', 'Puteaux', 'Clichy', 'Gennevilliers', 'Suresnes', 'Meudon', 'Montrouge', 'Châtillon'],
+    tip: 'Pour un immeuble de bureaux, indiquez-nous les horaires de présence et les accès techniques : nous proposons un créneau qui ne gêne pas l\'activité.',
+    focus: ['professionnels.html', 'deratisation.html', 'guepes-frelons.html'],
+  },
+  {
+    slug: 'seine-saint-denis', code: 93, name: 'Seine-Saint-Denis', a: 'en Seine-Saint-Denis',
+    intro: 'Grands ensembles, canal de l\'Ourcq, zones d\'activité, commerces de proximité : la Seine-Saint-Denis mêle habitat collectif dense et activité économique. Nous travaillons aussi bien pour un locataire que pour un bailleur ou un syndic.',
+    context: [
+      ['Habitat collectif', 'Gaines techniques, colonnes et locaux poubelles favorisent les blattes et les rongeurs. Un traitement coordonné à l\'échelle de la cage d\'escalier donne de bien meilleurs résultats.'],
+      ['Commerces alimentaires', 'Restaurants, boulangeries, épiceries : plan de lutte documenté et registre à jour pour être prêt en cas de contrôle d\'hygiène.'],
+      ['Punaises de lit', 'Locataire, vous pouvez demander la prise en charge à votre propriétaire. Notre rapport d\'intervention décrit la situation de façon objective.'],
+    ],
+    cities: ['Saint-Denis', 'Montreuil', 'Aubervilliers', 'Aulnay-sous-Bois', 'Drancy', 'Noisy-le-Grand', 'Pantin', 'Bondy', 'Épinay-sur-Seine', 'Sevran', 'Bobigny', 'Le Blanc-Mesnil', 'Saint-Ouen-sur-Seine', 'Livry-Gargan', 'Rosny-sous-Bois', 'Tremblay-en-France', 'Gagny', 'Les Lilas'],
+    tip: 'En cas de problème dans les parties communes, prévenez votre bailleur ou votre syndic : ce sont eux qui doivent décider du traitement de ces zones.',
+    focus: ['cafards-blattes.html', 'punaises-de-lit.html', 'deratisation.html'],
+  },
+  {
+    slug: 'val-de-marne', code: 94, name: 'Val-de-Marne', a: 'dans le Val-de-Marne',
+    intro: 'Entre la Seine et la Marne, le Val-de-Marne alterne bords de rivière, quartiers pavillonnaires et grands pôles d\'activité comme Rungis. Rongeurs, insectes et enjeux d\'hygiène alimentaire s\'y croisent.',
+    context: [
+      ['Bords de Seine et de Marne', 'Les berges et les réseaux attirent les surmulots, surtout après des travaux ou des crues. Inspection des caves et des vides sanitaires indispensable.'],
+      ['Métiers de bouche et logistique', 'Autour de Rungis et des zones d\'activité, le plan de lutte documenté est un vrai sujet pour les professionnels de l\'alimentaire.'],
+      ['Pavillons', 'Saint-Maur, Nogent, Vincennes, Sucy : guêpes et frelons sous les toits, rongeurs dans les combles et les abris de jardin.'],
+    ],
+    cities: ['Créteil', 'Vitry-sur-Seine', 'Champigny-sur-Marne', 'Saint-Maur-des-Fossés', 'Ivry-sur-Seine', 'Maisons-Alfort', 'Villejuif', 'Fontenay-sous-Bois', 'Vincennes', 'Alfortville', 'Choisy-le-Roi', 'Nogent-sur-Marne', 'Cachan', 'Thiais', 'Rungis', 'Sucy-en-Brie', 'Charenton-le-Pont', 'L\'Haÿ-les-Roses'],
+    tip: 'Après une montée des eaux dans une cave, ne nettoyez pas à sec et portez des gants : l\'eau a pu être souillée par l\'urine de rats.',
+    focus: ['deratisation.html', 'professionnels.html', 'desinfection.html'],
+  },
+  {
+    slug: 'seine-et-marne', code: 77, name: 'Seine-et-Marne', a: 'en Seine-et-Marne',
+    intro: 'C\'est le plus vaste département d\'Île-de-France. De Marne-la-Vallée à Fontainebleau et Provins, on y trouve villes nouvelles, forêts, fermes et grands jardins. Nous confirmons votre créneau par téléphone selon votre commune.',
+    context: [
+      ['Frelons et guêpes', 'Forêts, vergers et grands arbres offrent de nombreux sites de nidification. Les nids de frelons asiatiques restent souvent cachés jusqu\'à la chute des feuilles.'],
+      ['Granges et combles', 'Rats noirs et souris apprécient bâtiments agricoles, greniers et réserves de grain. Le contrôle des accès y demande une vraie inspection.'],
+      ['Villes nouvelles', 'À Chelles, Torcy ou Bussy-Saint-Georges, les copropriétés récentes ne sont pas épargnées par les punaises de lit et les blattes.'],
+    ],
+    cities: ['Meaux', 'Chelles', 'Melun', 'Pontault-Combault', 'Savigny-le-Temple', 'Bussy-Saint-Georges', 'Champs-sur-Marne', 'Villeparisis', 'Torcy', 'Roissy-en-Brie', 'Combs-la-Ville', 'Lagny-sur-Marne', 'Fontainebleau', 'Dammarie-les-Lys', 'Coulommiers', 'Provins', 'Nemours', 'Montereau-Fault-Yonne'],
+    tip: 'Pour un nid en hauteur, envoyez une photo avec un repère (toit, arbre, véhicule) : nous prévoyons directement le bon matériel.',
+    focus: ['guepes-frelons.html', 'deratisation.html', 'punaises-de-lit.html'],
+  },
+  {
+    slug: 'yvelines', code: 78, name: 'Yvelines', a: 'dans les Yvelines',
+    intro: 'De la vallée de Seine à la forêt de Rambouillet, en passant par Versailles et Saint-Germain-en-Laye, les Yvelines comptent beaucoup de maisons, de bâti ancien et de jardins. Le terrain de jeu idéal des rongeurs et des frelons.',
+    context: [
+      ['Vallée de Seine', 'De Poissy à Mantes-la-Jolie, le fleuve et les réseaux favorisent la présence de surmulots qui remontent vers les habitations.'],
+      ['Maisons et bâti ancien', 'Combles, vides sanitaires, murs en pierre : autant d\'accès pour les rats noirs et les souris. Le rebouchage est au cœur de notre intervention.'],
+      ['Forêts et jardins', 'Frelons européens et asiatiques s\'installent en lisière de forêt, dans les grands arbres et sous les toitures.'],
+    ],
+    cities: ['Versailles', 'Sartrouville', 'Saint-Germain-en-Laye', 'Mantes-la-Jolie', 'Poissy', 'Conflans-Sainte-Honorine', 'Montigny-le-Bretonneux', 'Les Mureaux', 'Houilles', 'Chatou', 'Plaisir', 'Trappes', 'Le Chesnay-Rocquencourt', 'Rambouillet', 'Maisons-Laffitte', 'Le Vésinet', 'Élancourt', 'Guyancourt'],
+    tip: 'Taillez la végétation en contact avec la façade et le toit : lierre et branches servent de chemin aux rats noirs jusqu\'aux combles.',
+    focus: ['deratisation.html', 'guepes-frelons.html', 'desinfection.html'],
+  },
+  {
+    slug: 'essonne', code: 91, name: 'Essonne', a: 'dans l\'Essonne',
+    intro: 'Quartiers denses du nord, bords de Seine, vallées et bourgs du sud : l\'Essonne réunit des situations très différentes. Évry-Courcouronnes, Massy ou Étampes n\'appellent pas les mêmes réponses, et nous adaptons le protocole au bâti.',
+    context: [
+      ['Pavillons du nord', 'Massy, Palaiseau, Savigny-sur-Orge : les souris dans les doublages et les rats dans les jardins sont fréquents à l\'approche de l\'hiver.'],
+      ['Résidences collectives', 'Blattes et punaises de lit se propagent par les gaines et les paliers. Nous travaillons avec les syndics pour traiter de façon coordonnée.'],
+      ['Sud rural', 'Autour d\'Étampes et d\'Arpajon, granges et grands terrains attirent rongeurs, guêpes et frelons.'],
+    ],
+    cities: ['Évry-Courcouronnes', 'Corbeil-Essonnes', 'Massy', 'Savigny-sur-Orge', 'Sainte-Geneviève-des-Bois', 'Palaiseau', 'Athis-Mons', 'Viry-Châtillon', 'Draveil', 'Yerres', 'Grigny', 'Brunoy', 'Les Ulis', 'Longjumeau', 'Étampes', 'Arpajon', 'Montgeron', 'Orsay'],
+    tip: 'Les souris rentrent souvent à l\'automne : profitez-en pour vérifier les passages de tuyaux et les bas de porte avant les premiers froids.',
+    focus: ['deratisation.html', 'cafards-blattes.html', 'guepes-frelons.html'],
+  },
+  {
+    slug: 'val-d-oise', code: 95, name: 'Val-d\'Oise', a: 'dans le Val-d\'Oise',
+    intro: 'Vallée de l\'Oise, Cergy-Pontoise, Argenteuil, plaine de France et secteur de Roissy : le Val-d\'Oise combine habitat dense, zones logistiques, hôtellerie et villages du Vexin.',
+    context: [
+      ['Hôtels et hébergements', 'Autour de Roissy, le passage des voyageurs expose aux punaises de lit. Détection discrète et traitement chambre par chambre.'],
+      ['Entrepôts et logistique', 'Stocks, quais et cartons attirent les rongeurs. Passages programmés et postes numérotés pour garder le contrôle.'],
+      ['Bords de l\'Oise et Vexin', 'Rongeurs près de l\'eau, fermes et maisons anciennes où frelons et rats noirs trouvent facilement à s\'abriter.'],
+    ],
+    cities: ['Argenteuil', 'Sarcelles', 'Cergy', 'Garges-lès-Gonesse', 'Franconville', 'Goussainville', 'Pontoise', 'Bezons', 'Ermont', 'Villiers-le-Bel', 'Gonesse', 'Saint-Ouen-l\'Aumône', 'Taverny', 'Herblay-sur-Seine', 'Sannois', 'Enghien-les-Bains', 'L\'Isle-Adam', 'Roissy-en-France'],
+    tip: 'Pour un entrepôt, signalez-nous le plan et les zones de stockage dès le premier message : nous dimensionnons le nombre de postes plus précisément.',
+    focus: ['professionnels.html', 'punaises-de-lit.html', 'deratisation.html'],
+  },
+];
