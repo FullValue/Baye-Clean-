@@ -8,12 +8,12 @@ export const SITE = {
   nameA: 'Baye',
   nameB: 'Clean',
   // Libellé de l'univers, affiché à côté du logo.
-  universe: 'Dératisation',
+  universe: 'Anti-nuisible',
   // Domaine à remplacer une fois réservé (sert au sitemap et aux balises SEO).
-  url: 'https://www.baye-clean.fr/deratisation',
-  phone: '06 52 27 24 40',
-  phoneIntl: '+33652272440',
-  wa: '33652272440',
+  url: 'https://www.baye-clean.fr/anti-nuisible',
+  phone: '07 66 18 83 48',
+  phoneIntl: '+33766188348',
+  wa: '33766188348',
   // Horaires : utilisés aussi par l'indicateur « disponible maintenant ».
   openHour: 8,
   closeHour: 20,

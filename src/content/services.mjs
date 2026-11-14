@@ -113,6 +113,58 @@ export const SERVICE_PAGES = [
     closing: 'Retrouvez des nuits tranquilles.',
   },
 
+  // ────────────────────────────── DÉSINSECTISATION
+  {
+    path: 'desinsectisation.html', spec: 'fourmi', need: 'Désinsectisation', crumb: 'Désinsectisation',
+    title: 'Désinsectisation à Paris et en Île-de-France : mouches, moucherons, mites',
+    description: `Mouches, moucherons, mites, moustiques, poissons d'argent : désinsectisation par un professionnel à Paris et en Île-de-France. Devis gratuit. Appelez le ${SITE.phone}.`,
+    h1: 'Des insectes qui reviennent ? On traite la cause, pas seulement ce qu\'on voit.',
+    lede: `Mouches, moucherons, mites, moustiques, poissons d'argent : chaque insecte a son origine et son protocole. Nous identifions la source, traitons le foyer et vous expliquons comment éviter son retour.`,
+    assure: [`Intervention ${SITE.delay}`, 'Produits professionnels autorisés', `Garantie écrite de ${G}`],
+    waText: 'Bonjour, j\'ai un problème d\'insectes.',
+    signsTitle: 'Quel insecte, d\'où vient-il ?',
+    signsIntro: 'Un insecte isolé n\'a rien d\'alarmant. Quand il revient chaque jour, c\'est qu\'un foyer existe quelque part : c\'est lui qu\'il faut trouver.',
+    signs: [
+      ['Des mouches qui reviennent', 'Elles sont attirées par les déchets, la nourriture, ou par une source cachée : poubelle mal fermée, siphon, cadavre d\'animal dans une cloison ou sous une toiture.'],
+      ['Des moucherons autour de l\'évier ou des fruits', 'Près des fruits mûrs, ce sont des drosophiles. Autour des siphons, des bondes et des siphons de sol, ils se développent dans le dépôt gras des canalisations.'],
+      ['Des papillons ou des toiles dans la cuisine', 'Des petits papillons gris et des fils soyeux dans la farine, les céréales ou les fruits secs trahissent des mites alimentaires.'],
+      ['Des trous dans les lainages et les tapis', 'Les larves de mites des vêtements se nourrissent de laine, de fourrure et de feutre, surtout dans les placards peu ouverts.'],
+      ['Des petits insectes argentés dans les pièces humides', 'Les poissons d\'argent vivent dans la salle de bain, la cuisine, les caves, et rongent papier, colle et cartons.'],
+      ['Des moustiques en nombre', 'Ils se développent dans l\'eau stagnante : coupelles, gouttières, regards, bidons. Sans traiter ces gîtes, les piqûres reviennent.'],
+    ],
+    risksTitle: 'Plus qu\'une gêne',
+    risks: [
+      ['Denrées contaminées', 'Mouches, moucherons et mites souillent les aliments. Les denrées touchées doivent être jetées.'],
+      ['Piqûres et allergies', 'Moustiques, puces et certains insectes provoquent démangeaisons et réactions allergiques, parfois importantes chez l\'enfant.'],
+      ['Dégâts matériels', 'Mites et poissons d\'argent abîment vêtements, tapis, livres et papiers peints.'],
+    ],
+    warning: `<strong>Un insecticide en bombe ne règle presque jamais le problème.</strong> Il élimine les adultes visibles, mais pas la source ni les larves. Mal utilisé, il peut aussi contaminer les surfaces où l'on prépare les repas.`,
+    stepsTitle: 'Trouver la source, puis traiter',
+    steps: [
+      ['Identification', 'Nous reconnaissons l\'insecte à partir de photos ou sur place, et recherchons son origine : siphon, denrée, humidité, déchets, nid.'],
+      ['Traitement ciblé', 'Pulvérisation résiduelle, gel, nébulisation ou piégeage, selon l\'espèce et la pièce. Les produits sont professionnels et autorisés.'],
+      ['Traitement de la source', 'Nettoyage et traitement des siphons, retrait des denrées touchées, assèchement : sans cela, l\'infestation repart.'],
+      ['Contrôle et garantie', `Rapport écrit et certificat de passage. Si le problème persiste sous ${G} après le protocole complet, nous revenons gratuitement.`],
+    ],
+    preventTitle: 'Pour que les insectes ne reviennent pas',
+    prevent: [
+      'Passez farines, céréales et fruits secs en boîtes hermétiques.',
+      'Videz et nettoyez régulièrement les siphons d\'évier et de douche.',
+      'Fermez les poubelles et sortez-les souvent, surtout l\'été.',
+      'Videz chaque semaine les coupelles et les récipients d\'eau stagnante.',
+      'Aérez les pièces humides et réparez les fuites.',
+      'Rangez vêtements et lainages propres, dans des housses fermées.',
+    ],
+    faq: [
+      ['Pourquoi ai-je des moucherons alors que ma cuisine est propre ?', 'Ils proviennent souvent des siphons et des canalisations, où se forme un dépôt organique invisible. Un simple nettoyage de surface ne suffit pas : il faut traiter la source.'],
+      ['Faut-il quitter mon logement pendant le traitement ?', 'Cela dépend du protocole. Le technicien vous donne, avant le passage, les consignes précises : durée d\'aération, délai de retour, protection des denrées et des aquariums.'],
+      ['Traitez-vous aussi les cafards, les punaises et les guêpes ?', 'Oui, ces nuisibles ont leur propre page : <a href="{{r}}cafards-blattes.html">cafards, fourmis et puces</a>, <a href="{{r}}punaises-de-lit.html">punaises de lit</a> et <a href="{{r}}guepes-frelons.html">guêpes et frelons</a>.'],
+      ['Intervenez-vous dans les restaurants et les commerces ?', 'Oui, avec registre et rapport écrit, en dehors des heures d\'ouverture si besoin. Voir notre <a href="{{r}}professionnels.html">offre pour les professionnels</a>.'],
+      ['Comment demander un devis ?', 'Par le formulaire, au téléphone ou sur WhatsApp, avec une photo de l\'insecte si possible. Le devis est gratuit et sans engagement.'],
+    ],
+    closing: 'Des insectes chez vous ? Parlons-en avant qu\'ils s\'installent.',
+  },
+
   // ────────────────────────────── CAFARDS
   {
     path: 'cafards-blattes.html', spec: 'cafard', key: 'cafards', extraKey: 'fourmis', need: 'Cafards, fourmis ou puces', crumb: 'Cafards, fourmis et puces',

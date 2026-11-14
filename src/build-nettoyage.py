@@ -25,7 +25,7 @@ WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path 
 DOC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM9 12h7M9 16h7"/></svg>'
 CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>'
-WA_URL = 'https://wa.me/33652272440?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20prestations%20de%20m%C3%A9nage.'
+WA_URL = 'https://wa.me/33766188348?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20prestations%20de%20m%C3%A9nage.'
 U = 'https://images.unsplash.com/'
 FONTS = '<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">'
 
@@ -51,16 +51,16 @@ def header(r, space):
     ent_extra = [('prestations.html', 'Toutes les prestations'), ('secteurs.html', 'Secteurs'),
                  ('zone.html', 'Zone d’intervention'), ('devis.html', 'Demander un devis')]
     quote = f'{r}{space}/devis.html' if space else f'{r}index.html#espaces'
-    return f'''<div class="universe"><div class="wrap universe-in"><nav aria-label="Univers Baye Clean"><a href="{r}../index.html">Baye Clean</a><a href="{r}../deratisation/index.html">Dératisation</a><a href="{r}index.html" aria-current="true">Nettoyage</a></nav><span>Île-de-France et Oise</span></div></div>
+    return f'''<div class="universe"><div class="wrap universe-in"><nav aria-label="Univers Baye Clean"><a href="{r}../index.html">Baye Clean</a><a href="{r}../anti-nuisible/index.html">Anti-nuisible</a><a href="{r}index.html" aria-current="true">Nettoyage</a></nav><span>Île-de-France et Oise</span></div></div>
 <header class="site-header"><div class="wrap header-in">
 <a class="logo" href="{r}index.html" aria-label="Baye Clean Nettoyage, accueil">{logo(r)}<small>Nettoyage</small></a>
 <nav class="main-nav" aria-label="Navigation principale"><ul>
-<li class="has-sub"><a href="{r}particuliers/index.html"{cur('particuliers')}>Particuliers</a><button class="sub-btn" type="button" aria-label="Services pour particuliers" aria-expanded="false">{CHEV}</button>{sub(r, 'particuliers', PART, part_extra)}</li>
 <li class="has-sub"><a href="{r}entreprises/index.html"{cur('entreprises')}>Entreprises</a><button class="sub-btn" type="button" aria-label="Services pour entreprises" aria-expanded="false">{CHEV}</button>{sub(r, 'entreprises', ENT, ent_extra)}</li>
+<li class="has-sub"><a href="{r}particuliers/index.html"{cur('particuliers')}>Particuliers</a><button class="sub-btn" type="button" aria-label="Services pour particuliers" aria-expanded="false">{CHEV}</button>{sub(r, 'particuliers', PART, part_extra)}</li>
 </ul></nav>
 <div class="header-cta">
 <a class="btn btn-signal btn-quote" href="{quote}">{DOC_SVG}<span>Devis gratuit</span></a>
-<a class="btn btn-line" href="tel:+33652272440" aria-label="Appeler le 06 52 27 24 40">{PHONE_SVG}<span class="lbl">06 52 27 24 40</span></a>
+<a class="btn btn-line" href="tel:+33766188348" aria-label="Appeler le 07 66 18 83 48">{PHONE_SVG}<span class="lbl">07 66 18 83 48</span></a>
 <a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener" aria-label="WhatsApp">{WA_SVG}<span class="lbl">WhatsApp</span></a>
 </div>
 <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
@@ -74,14 +74,14 @@ def footer(r, space):
     return f'''<footer class="site-footer"><div class="wrap">
 <div class="footer-grid">
 <div><a class="logo logo--full" href="{r}index.html" aria-label="Baye Clean, accueil">{logo(r)}</a><p>Nettoyage pour les particuliers, les entreprises et les industriels, en Île-de-France et dans l’Oise.</p></div>
-<div><h2>Particuliers</h2><ul>{pl}</ul></div>
 <div><h2>Entreprises</h2><ul>{el}</ul></div>
-<div><h2>Contact</h2><ul><li><a href="tel:+33652272440">06 52 27 24 40</a></li><li><a href="{WA_URL}" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="{r}particuliers/devis.html">Devis particuliers</a></li><li><a href="{r}entreprises/devis.html">Devis entreprises</a></li><li><a href="{r}../deratisation/index.html">Dératisation Baye Clean</a></li></ul></div>
+<div><h2>Particuliers</h2><ul>{pl}</ul></div>
+<div><h2>Contact</h2><ul><li><a href="tel:+33766188348">07 66 18 83 48</a></li><li><a href="{WA_URL}" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="{r}entreprises/devis.html">Devis entreprises</a></li><li><a href="{r}particuliers/devis.html">Devis particuliers</a></li><li><a href="{r}../anti-nuisible/index.html">Anti-nuisible Baye Clean</a></li></ul></div>
 </div>
 <div class="footer-end"><span>© 2026 Baye Clean</span><a href="{r}mentions-legales.html">Mentions légales et confidentialité</a></div>
 </div></footer>
 <nav class="call-bar" aria-label="Contact rapide">
-<a href="tel:+33652272440">{PHONE_SVG}Appeler</a>
+<a href="tel:+33766188348">{PHONE_SVG}Appeler</a>
 <a class="wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a>
 <a class="dv" href="{quote}">{DOC_SVG}Devis</a>
 </nav>'''
@@ -130,6 +130,7 @@ def transform(html, space, depth):
     if 'nettoyage.css' not in s:
         s = re.sub(r'(<link rel="stylesheet" href="([^"]*)style\.css">)', r'\1\n<link rel="stylesheet" href="\2nettoyage.css">', s)
     s = s.replace('| Bouba Ménage', '| Baye Clean Nettoyage').replace('Bouba Ménage', 'Baye Clean')
+    s = s.replace('33652272440', '33766188348').replace('06 52 27 24 40', '07 66 18 83 48')  # ancien numéro des pages d'origine
     s = s.replace('professionnels/', 'entreprises/')
     s = re.sub(r'prestations\.html#([a-z-]+)', r'\1.html', s)
     s = s.replace('Prix annoncé', 'Devis gratuit').replace('Le prix est fixé avant l’intervention, sans surprise.', 'Le devis est établi avant l’intervention et ne change plus.')
@@ -159,7 +160,7 @@ def home():
     pl = ''.join(f'<li><a href="particuliers/{a}.html">{n}{ARROW}</a></li>' for a, n in PART)
     el = ''.join(f'<li><a href="entreprises/{a}.html">{n}{ARROW}</a></li>' for a, n in ENT)
     desc = 'Baye Clean Nettoyage : nettoyage de canapés, matelas et tapis à domicile pour les particuliers, ménage, industrie, fin de chantier et vitrerie pour les entreprises. Île-de-France et Oise.'
-    ld = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Baye Clean", "telephone": "+33652272440",
+    ld = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Baye Clean", "telephone": "+33766188348",
           "description": "Nettoyage pour particuliers, entreprises et industriels en Île-de-France et dans l’Oise.",
           "areaServed": [{"@type": "AdministrativeArea", "name": "Île-de-France"}, {"@type": "AdministrativeArea", "name": "Oise"}]}
     hp = f'{U}photo-1771531072574-af6ed6b954c0?auto=format&fit=crop'
@@ -172,7 +173,7 @@ def home():
 <div class="wrap hero-in">
 <h1>Le nettoyage, chez vous comme dans vos locaux.</h1>
 <p class="lead">Nettoyage à domicile pour les particuliers, entretien, industrie, fin de chantier et vitrerie pour les entreprises. En Île-de-France et dans l’Oise.</p>
-<div class="btn-row"><a class="btn btn-signal" href="#espaces">Choisir mon espace {ARROW}</a><a class="btn btn-line" href="tel:+33652272440">{PHONE_SVG}Appeler le 06 52 27 24 40</a><a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a></div>
+<div class="btn-row"><a class="btn btn-signal" href="#espaces">Choisir mon espace {ARROW}</a><a class="btn btn-line" href="tel:+33766188348">{PHONE_SVG}Appeler le 07 66 18 83 48</a><a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a></div>
 <dl class="spec">
 <div><dt>Zone</dt><dd>Île-de-France et Oise</dd></div>
 <div><dt>Clients</dt><dd>Particuliers et entreprises</dd></div>
@@ -208,7 +209,7 @@ def home():
 
 <section class="cta"><div class="wrap cta-in">
 <h2>Un besoin de nettoyage&nbsp;?</h2>
-<div><a class="phone" href="tel:+33652272440">06 52 27 24 40</a>
+<div><a class="phone" href="tel:+33766188348">07 66 18 83 48</a>
 <div class="btn-row stack"><a class="btn btn-ink" href="#espaces">{DOC_SVG}Demander un devis</a><a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a></div></div>
 </div></section>
 </main>
@@ -263,7 +264,7 @@ def service_pages():
             intro = re.sub(r'<[^>]+>', '', v['intro'])
             devis = f'devis.html?prestation={v["id"]}'
             ld = {"@context": "https://schema.org", "@type": "Service", "name": name, "description": intro,
-                  "provider": {"@type": "ProfessionalService", "name": "Baye Clean", "telephone": "+33652272440"},
+                  "provider": {"@type": "ProfessionalService", "name": "Baye Clean", "telephone": "+33766188348"},
                   "areaServed": [{"@type": "AdministrativeArea", "name": "Île-de-France"}, {"@type": "AdministrativeArea", "name": "Oise"}]}
             html = f'''{head(r, f'{name} {cfg["where"]} en Île-de-France et dans l’Oise | Baye Clean Nettoyage', f'{intro} Devis gratuit, Île-de-France et Oise.', ld, f'{name} | Baye Clean Nettoyage')}
 {header(r, space)}
@@ -274,7 +275,7 @@ def service_pages():
 <nav class="svc-crumbs" aria-label="Fil d’Ariane"><a href="index.html">{cfg['label']}</a><span aria-hidden="true">/</span><a href="prestations.html">Prestations</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav>
 <h1>{v['name']}</h1>
 <p class="lead">{v['intro']}</p>
-<div class="btn-row"><a class="btn btn-signal" href="{devis}">{DOC_SVG}Demander un devis gratuit</a><a class="btn btn-line" href="tel:+33652272440">{PHONE_SVG}06 52 27 24 40</a><a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a></div>
+<div class="btn-row"><a class="btn btn-signal" href="{devis}">{DOC_SVG}Demander un devis gratuit</a><a class="btn btn-line" href="tel:+33766188348">{PHONE_SVG}07 66 18 83 48</a><a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a></div>
 </div>
 <figure class="svc-hero-photo">{hero_img}</figure>
 </div></section>
@@ -297,7 +298,7 @@ def service_pages():
 
 <section class="cta"><div class="wrap cta-in">
 <h2>{name}&nbsp;: parlons-en.</h2>
-<div><a class="phone" href="tel:+33652272440">06 52 27 24 40</a>
+<div><a class="phone" href="tel:+33766188348">07 66 18 83 48</a>
 <div class="btn-row stack"><a class="btn btn-ink" href="{devis}">{DOC_SVG}Demander un devis</a><a class="btn btn-wa" href="{WA_URL}" target="_blank" rel="noopener">{WA_SVG}WhatsApp</a></div></div>
 </div></section>
 </main>

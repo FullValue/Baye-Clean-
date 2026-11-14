@@ -1,9 +1,9 @@
 
 import { logoImg } from './logo.mjs';
 
-const PHONE = '06 52 27 24 40';
-const TEL = 'tel:+33652272440';
-const WA = 'https://wa.me/33652272440?text=Bonjour%2C%20je%20souhaite%20des%20informations.';
+const PHONE = '07 66 18 83 48';
+const TEL = 'tel:+33766188348';
+const WA = 'https://wa.me/33766188348?text=Bonjour%2C%20je%20souhaite%20des%20informations.';
 const PHOTO = 'https://images.unsplash.com/photo-1771531072574-af6ed6b954c0?auto=format&fit=crop';
 const PHOTO_DERAT = 'https://images.unsplash.com/photo-1747659629851-a92bd71149f6?auto=format&fit=crop';
 const SPARK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 4.5 10.6 12 12-7.5 1.4-11 5-12 12-1-7-4.5-10.6-12-12C7.5 10.6 11 7 12 0Z" fill="currentColor"/></svg>';
@@ -19,12 +19,12 @@ export const portal = () => `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Baye Clean | Nettoyage et dératisation à Paris et en Île-de-France</title>
+<title>Baye Clean | Anti-nuisible et nettoyage à Paris et en Île-de-France</title>
 <meta name="description" content="Baye Clean : dératisation, désinsectisation et désinfection d'un côté, nettoyage pour particuliers et entreprises de l'autre. Île-de-France et Oise. Appel ou WhatsApp : ${PHONE}.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Baye Clean">
-<meta property="og:title" content="Baye Clean | Nettoyage et dératisation">
+<meta property="og:title" content="Baye Clean | Anti-nuisible et nettoyage">
 <meta property="og:description" content="Dératisation, désinsectisation, désinfection et nettoyage en Île-de-France et dans l'Oise.">
 <meta name="theme-color" content="#13254f">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -35,28 +35,28 @@ export const portal = () => `<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/portal.css">
 <script type="application/ld+json">${JSON.stringify({
-  '@context': 'https://schema.org', '@type': 'Organization', name: 'Baye Clean', telephone: '+33652272440',
+  '@context': 'https://schema.org', '@type': 'Organization', name: 'Baye Clean', telephone: '+33766188348',
   areaServed: [{ '@type': 'AdministrativeArea', name: 'Île-de-France' }, { '@type': 'AdministrativeArea', name: 'Oise' }],
 })}</script>
 </head>
 <body>
 <a class="skip" href="#choix">Aller au choix de l'activité</a>
-<h1 class="sr">Baye Clean : nettoyage et dératisation</h1>
+<h1 class="sr">Baye Clean : anti-nuisible et nettoyage</h1>
 <header class="top">
-  <a class="brand" href="index.html" aria-label="Baye Clean, nettoyage et dératisation">${logoImg({ alt: '' }).replace('decoding="async"', 'fetchpriority="high"')}</a>
+  <a class="brand" href="index.html" aria-label="Baye Clean, anti-nuisible et nettoyage">${logoImg({ alt: '' }).replace('decoding="async"', 'fetchpriority="high"')}</a>
   <div class="top__contact">
     <a class="btn btn--call" href="${TEL}" aria-label="Appeler le ${PHONE}">${ICON.phone}<span>${PHONE}</span></a>
     <a class="btn btn--wa" href="${WA}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICON.wa}<span>WhatsApp</span></a>
   </div>
 </header>
 <main id="choix" class="doors">
-  <a class="door door--derat" href="deratisation/index.html">
+  <a class="door door--derat" href="anti-nuisible/index.html">
     <img class="door__photo" src="${PHOTO_DERAT}&w=1400&q=72" srcset="${PHOTO_DERAT}&w=640&q=72 640w, ${PHOTO_DERAT}&w=1000&q=72 1000w, ${PHOTO_DERAT}&w=1400&q=72 1400w" sizes="(max-width: 760px) 100vw, 50vw" alt="" fetchpriority="high">
     <div class="door__body">
       <p class="door__tag">Paris et Île-de-France</p>
-      <h2>Dératisation</h2>
-      <p class="door__text">Rats, souris, punaises de lit, cafards, guêpes et frelons. Intervention sous 24&nbsp;h, devis gratuit.</p>
-      <ul class="door__chips"><li>Rats et souris</li><li>Punaises</li><li>Cafards</li><li>Frelons</li><li>Désinfection</li></ul>
+      <h2>Anti-nuisible</h2>
+      <p class="door__text">Dératisation, désinsectisation, punaises de lit, cafards, guêpes et frelons. Intervention sous 24&nbsp;h, devis gratuit.</p>
+      <ul class="door__chips"><li>Dératisation</li><li>Désinsectisation</li><li>Punaises</li><li>Frelons</li><li>Désinfection</li></ul>
       <span class="door__go">Entrer ${ICON.arrow}</span>
     </div>
   </a>

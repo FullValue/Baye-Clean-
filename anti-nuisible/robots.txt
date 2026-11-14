@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.baye-clean.fr/anti-nuisible/sitemap.xml

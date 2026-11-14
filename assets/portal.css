@@ -117,3 +117,6 @@ h1,h2,p{margin:0}
   .door{min-height:calc(50svh - 34px);padding-top:2.4rem}
   .door--menage{padding-top:2.4rem}
 }
+/* « Anti-nuisible » reste sur une seule ligne */
+.door--derat h2{font-size:clamp(2.3rem,5.3vw,5.8rem);white-space:nowrap}
+@media (max-width:760px){.door--derat h2{font-size:clamp(2.2rem,11.5vw,3.6rem)}}

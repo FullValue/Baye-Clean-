@@ -2,8 +2,8 @@
 
 Site statique : déposer le dossier `baye-clean/` tel quel chez l'hébergeur (sans `src/`).
 
-- `index.html` : accueil, choix Dératisation / Nettoyage
-- `deratisation/` : généré par `src/build.mjs` (contenu dans `src/content/`, style dans `src/assets/style.css`)
+- `index.html` : accueil, choix Anti-nuisible / Nettoyage
+- `anti-nuisible/` : généré par `src/build.mjs` (contenu dans `src/content/`, style dans `src/assets/style.css`)
 - `nettoyage/` : généré par `src/build-nettoyage.py` à partir des pages d'origine du dossier `R- BOUBA MENAGE`
   (styles : `nettoyage/assets/style.css` + `nettoyage/assets/nettoyage.css`, menus : `nettoyage/assets/site.js`)
 - Logo officiel (horizontal), utilisé partout via `src/logo.mjs` :

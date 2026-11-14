@@ -16,6 +16,7 @@ export const ICONS = {
 
 export const SERVICES = [
   { href: 'deratisation.html', name: 'Dératisation', key: 'rats', spec: 'rat', need: 'Rats ou souris', sign: 'Grattements la nuit, déjections, câbles ou emballages rongés.' },
+  { href: 'desinsectisation.html', name: 'Désinsectisation', key: 'desinsectisation', spec: 'fourmi', need: 'Désinsectisation', sign: 'Mouches, moucherons, mites ou poissons d\'argent qui reviennent malgré le nettoyage.' },
   { href: 'punaises-de-lit.html', name: 'Punaises de lit', key: 'punaises', spec: 'punaise', need: 'Punaises de lit', sign: 'Piqûres alignées au réveil, points noirs sur le matelas.' },
   { href: 'cafards-blattes.html', name: 'Cafards, fourmis et puces', key: 'cafards', spec: 'cafard', need: 'Cafards, fourmis ou puces', sign: 'Fuite vers l\'évier quand la lumière s\'allume, colonnes sur les plinthes.' },
   { href: 'guepes-frelons.html', name: 'Guêpes et frelons', key: 'frelons', spec: 'frelon', need: 'Guêpes ou frelons', sign: 'Allées et venues sous un toit, nid dans un arbre ou un volet.' },
@@ -143,7 +144,7 @@ ${ld}
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <div class="strip"><div class="wrap">
-  <nav class="strip__switch" aria-label="Univers Baye Clean"><a href="{{r}}../index.html">Baye Clean</a><span aria-current="true">Dératisation</span><a href="{{r}}../nettoyage/index.html">Nettoyage</a></nav>
+  <nav class="strip__switch" aria-label="Univers Baye Clean"><a href="{{r}}../index.html">Baye Clean</a><span aria-current="true">Anti-nuisible</span><a href="{{r}}../nettoyage/index.html">Nettoyage</a></nav>
   <span class="strip__info"><span class="status" data-status data-open="1"><i></i><span>${SITE.hoursLabel}</span></span><span class="hide-sm">Urgence nuisibles : <a href="${tel}">${SITE.phone}</a></span></span>
 </div></div>
 <header class="header"><div class="wrap">

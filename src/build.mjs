@@ -13,7 +13,7 @@ import { portal } from './portal.mjs';
 import { FAVICON } from './logo.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
-const out = join(root, '..', 'deratisation');
+const out = join(root, '..', 'anti-nuisible');
 rmSync(out, { recursive: true, force: true });
 const pages = [];
 const emit = (opts) => {
@@ -40,8 +40,8 @@ const homeFaq = [
 ];
 emit({
   path: 'index.html',
-  title: `Dératisation, punaises, frelons à Paris et en Île-de-France | ${SITE.name}`,
-  description: `Rats, souris, punaises de lit, cafards, guêpes, frelons, désinfection : intervention ${SITE.delay} à Paris et en Île-de-France. Appel direct ou WhatsApp : ${SITE.phone}.`,
+  title: `Anti-nuisible à Paris et en Île-de-France : dératisation, désinsectisation | ${SITE.name}`,
+  description: `Dératisation, désinsectisation, punaises de lit, cafards, guêpes, frelons, désinfection : intervention ${SITE.delay} à Paris et en Île-de-France. Appel direct ou WhatsApp : ${SITE.phone}.`,
   schema: [faqSchema(homeFaq)],
   body: `
 <section class="hero"><div class="wrap hero__grid">
@@ -356,6 +356,7 @@ const clueRows = [
   ['Crottes de 3 à 6 mm, sachets percés, petits bruits dans les cloisons', 'Souris', 'deratisation.html'],
   ['Crottes de 1 à 2 cm, traces grasses, bruits lourds, odeur d\'ammoniac', 'Rats', 'deratisation.html'],
   ['Colonnes d\'insectes le long des plinthes', 'Fourmis', 'cafards-blattes.html'],
+  ['Moucherons autour des siphons, papillons ou toiles dans la farine, trous dans les lainages', 'Mouches, moucherons, mites', 'desinsectisation.html'],
   ['Piqûres aux chevilles, animal qui se gratte', 'Puces', 'cafards-blattes.html'],
   ['Va-et-vient d\'insectes rayés au même endroit, nid visible', 'Guêpes ou frelons', 'guepes-frelons.html'],
 ];
@@ -603,4 +604,4 @@ writeFileSync(join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SI
 const today = new Date().toISOString().slice(0, 10);
 writeFileSync(join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `  <url><loc>${SITE.url}/${p.replace(/index\.html$/, '')}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(root, '..', 'index.html'), portal());
-console.log(`${pages.length} pages générées dans deratisation/, accueil Baye Clean mis à jour`);
+console.log(`${pages.length} pages générées dans anti-nuisible/, accueil Baye Clean mis à jour`);

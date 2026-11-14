@@ -1,5 +1,5 @@
 /* Numéro WhatsApp au format international, sans le + ni le 0 initial */
-var WHATSAPP = '33652272440';
+var WHATSAPP = '33766188348';
 
 document.documentElement.classList.add('js');
 
