@@ -56,11 +56,6 @@ h1,h2,p{margin:0}
 .door--menage h2{font-family:"Archivo","Arial Black",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(2.6rem,6vw,6rem)}
 .door--menage h2::first-letter{color:inherit}
 .door--menage .door__go{background:var(--blue);color:var(--white)}
-.door__spark{position:absolute;z-index:-1;color:var(--sky)}
-.door__spark svg{width:100%;height:100%}
-.door__spark--a{top:22%;right:12%;width:56px;height:56px;animation:twinkle 3.2s ease-in-out infinite}
-.door__spark--b{top:31%;right:21%;width:30px;height:30px;color:var(--blue);animation:twinkle 3.2s 1.1s ease-in-out infinite}
-@keyframes twinkle{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(.7) rotate(20deg);opacity:.6}}
 
 @media (max-width:760px){
   .doors{grid-template-columns:1fr}
@@ -69,7 +64,6 @@ h1,h2,p{margin:0}
   .door h2{font-size:clamp(2.8rem,15vw,4.4rem)}
   .door__text{display:none}
   .door__chips{margin-bottom:1.2rem}
-  .door__spark--a{top:12%;width:40px;height:40px}.door__spark--b{top:20%}
   .brand{width:130px;padding:6px 8px;border-radius:10px}
   .top__contact span{display:none}
   .btn{width:46px;padding:0;justify-content:center}
@@ -117,6 +111,7 @@ h1,h2,p{margin:0}
   .door{min-height:calc(50svh - 34px);padding-top:2.4rem}
   .door--menage{padding-top:2.4rem}
 }
-/* « Anti-nuisible » reste sur une seule ligne */
-.door--derat h2{font-size:clamp(2.3rem,5.3vw,5.8rem);white-space:nowrap}
-@media (max-width:760px){.door--derat h2{font-size:clamp(2.2rem,11.5vw,3.6rem)}}
+
+/* Les deux titres de l'entrée : même police, capitales, même taille */
+.door h2,.door--menage h2{font-family:"Archivo","Arial Black",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1;white-space:nowrap;font-size:clamp(2rem,4.5vw,4.9rem)}
+@media (max-width:760px){.door h2,.door--menage h2{font-size:clamp(1.9rem,9.2vw,3.2rem)}}

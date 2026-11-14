@@ -221,12 +221,8 @@ body.nettoyage .p-page-head + .p-section.p-flush { padding-top: var(--section); 
 .hazard { height: clamp(28px, 4vw, 54px); background: var(--petrol) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60V44C420 6 1020 4 1440 34V60Z' fill='%23f8f9fc'/%3E%3Cpath d='M0 44C420 6 1020 4 1440 34' fill='none' stroke='%232f6fe0' stroke-width='5'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat; }
 .space-photo::after, .p-hero-photo::after { height: 6px; background: linear-gradient(90deg, var(--blue), var(--sky)); }
 
-/* Étincelles décoratives dans les grands en-têtes */
-.hero::after, .svc-hero-in::after, .page-head::after, .p-page-head::after { content: ""; position: absolute; pointer-events: none; top: clamp(1.5rem, 5vw, 4rem); right: clamp(1rem, 6vw, 7rem); width: clamp(44px, 6vw, 84px); aspect-ratio: 1; background: var(--sky); -webkit-mask: var(--spark) center/contain no-repeat; mask: var(--spark) center/contain no-repeat; animation: twinkle 3.6s ease-in-out infinite; }
 .svc-hero-in { position: relative; }
-.svc-hero-in::after { top: .5rem; right: auto; left: 50%; width: 40px; }
 .page-head, .p-page-head { position: relative; overflow: hidden; }
-.hero::after { z-index: 1; }
 @keyframes twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(.72) rotate(18deg); opacity: .55; } }
 
 /* Tailles des grands titres en capitales larges */

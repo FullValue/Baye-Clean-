@@ -61,7 +61,6 @@ export const portal = () => `<!doctype html>
     </div>
   </a>
   <a class="door door--menage" href="nettoyage/index.html">
-    <span class="door__spark door__spark--a" aria-hidden="true">${SPARK}</span><span class="door__spark door__spark--b" aria-hidden="true">${SPARK}</span>
     <img class="door__photo" src="${PHOTO}&w=1400&q=72" srcset="${PHOTO}&w=640&q=72 640w, ${PHOTO}&w=1000&q=72 1000w, ${PHOTO}&w=1400&q=72 1400w" sizes="(max-width: 760px) 100vw, 50vw" alt="" fetchpriority="high">
     <div class="door__body">
       <p class="door__tag">Île-de-France et Oise</p>
